@@ -1,0 +1,82 @@
+# FluxCity — Backend Spring Boot
+
+## Présentation
+
+Ce module constitue le backend applicatif de FluxCity.
+
+Il est destiné à gérer les fonctionnalités métier de la plateforme, notamment la gestion des projets de travaux, des scénarios et, à terme, des alertes.
+
+Les calculs d'itinéraires et les simulations seront réalisés par le service Python dédié.
+
+## Stack technique
+
+- **Java 25 LTS** : langage de programmation orienté objet.
+- **Spring Boot 4** : framework facilitant le développement d'applications Java.
+- **Spring Web MVC** : développement d'API REST.
+- **Spring Boot Actuator** : supervision et vérification de l'état de l'application.
+- **Maven** : gestion des dépendances et du cycle de compilation.
+
+## Prérequis
+
+- JDK 25
+- Git
+- Un IDE compatible Java
+
+Maven peut être exécuté directement avec le wrapper `mvnw` fourni dans le projet.
+
+## Installation
+
+Depuis le dossier `apps/backend` :
+
+```bash
+./mvnw clean install
+```
+
+## Démarrage
+
+```bash
+./mvnw spring-boot:run
+```
+
+L'application démarre par défaut sur :
+
+`http://localhost:8080`
+
+## Vérification
+
+L'endpoint suivant permet de vérifier que le backend fonctionne :
+
+`GET http://localhost:8080/actuator/health`
+
+## Tests
+
+```bash
+./mvnw test
+```
+
+## Concepts à comprendre
+
+Avant de contribuer au backend, il est recommandé de comprendre :
+
+1. Les bases de Java et de la programmation orientée objet.
+2. Le fonctionnement du protocole HTTP.
+3. Les principes d'une API REST.
+4. Les annotations Spring.
+5. Le principe d'injection de dépendances.
+6. Le fonctionnement de Maven.
+7. La différence entre un contrôleur, un service et un repository.
+
+## Ressources pédagogiques
+
+- [Documentation Java](https://dev.java/learn/)
+- [Documentation Spring Boot](https://docs.spring.io/spring-boot/index.html)
+- [Guide REST Spring](https://spring.io/guides/gs/rest-service)
+- [Documentation Maven](https://maven.apache.org/guides/)
+
+## Règles de contribution
+
+Toute contribution doit respecter les conventions définies dans le fichier `CONTRIBUTING.md` à la racine du monorepo.
+
+Les fonctionnalités doivent être développées sur des branches dédiées et soumises à une Pull Request.
+
+Les contributeurs doivent être capables d'expliquer et de tester leur code.
