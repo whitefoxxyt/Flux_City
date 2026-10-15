@@ -1,0 +1,47 @@
+[project]
+name = "fluxcity-simulation-api"
+version = "0.1.0"
+description = "FluxCity - API de simulation urbaine et d'accessibilité PMR"
+readme = "README.md"
+
+authors = [
+    { name = "whitefox", email = "whitefoxx.pro.yt@gmail.com" }
+]
+
+requires-python = ">=3.14,<3.15"
+
+dependencies = [
+    "fastapi>=0.143.1",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+fluxcity-simulation-api = "fluxcity_simulation_api.main:main"
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+    "ruff>=0.17.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py314"
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "E",   # Erreurs pycodestyle
+    "F",   # Erreurs Pyflakes
+    "I",   # Organisation des imports
+    "UP",  # Modernisation Python
+    "B",   # Bugs potentiels
+]

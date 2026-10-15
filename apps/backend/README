@@ -18,9 +18,11 @@ Les calculs d'itinéraires et les simulations seront réalisés par le service P
 
 ## Prérequis
 
-- JDK 25
+- JDK 25 (la propriété `java.version` du POM cible également 25)
 - Git
 - Un IDE compatible Java
+
+Vérifier `java -version` et configurer `JAVA_HOME` vers le JDK 25.
 
 Maven peut être exécuté directement avec le wrapper `mvnw` fourni dans le projet.
 
@@ -75,7 +77,7 @@ Avant de contribuer au backend, il est recommandé de comprendre :
 
 ## Règles de contribution
 
-Toute contribution doit respecter les conventions définies dans le fichier `CONTRIBUTING.md` à la racine du monorepo.
+Aucun `CONTRIBUTING.md` n’est encore présent à la racine du monorepo.
 
 Les fonctionnalités doivent être développées sur des branches dédiées et soumises à une Pull Request.
 

@@ -1,3 +1,35 @@
+# FluxCity — Frontend
+
+Socle React / TypeScript / Vite. L’interface actuelle est la démonstration Vite ;
+aucun appel aux backends ou écran métier n’est encore implémenté.
+
+## Installation et démarrage
+
+Prérequis : Node.js `^20.19.0` ou `>=22.12.0` et npm.
+Depuis `apps/frontend` :
+
+```bash
+npm ci
+npm run dev
+```
+
+Ouvrir l’adresse indiquée par Vite, généralement `http://localhost:5173`.
+Arrêter avec `Ctrl+C`.
+
+## Vérifications et prévisualisation
+
+```bash
+npm run lint
+npm run build
+npm run preview
+```
+
+Le build est généré dans `dist/`. La prévisualisation affiche son adresse locale.
+Conserver `package-lock.json` dans Git ; exclure `node_modules/` et `dist/`.
+Aucun test automatisé frontend n’est configuré à ce stade.
+
+## Référence du modèle initial
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
